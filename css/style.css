@@ -108,14 +108,20 @@ li {
 .top--subtiitle {
    font-size: 37px;
    font-family: 'Italianno', cursive;
+   font-size: 50px;
+   font-family: 'Roboto', sans-serif;
    margin-bottom: 35px;
 }
 
 .top-title {
    font-size: 95px;
+   font-size: 28px;
    text-transform: uppercase;
    line-height: 50px;
+   line-height: 32px;
    margin-bottom: 55px;
+   font-family: 'Roboto';
+   font-weight: lighter;
 }
 
 .top--link {
