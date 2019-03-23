@@ -43,7 +43,7 @@ li {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 30px 0;
+   padding: 20px 0;
 }
 
 .header--menu {
@@ -63,31 +63,60 @@ li {
 
 .header--menu-item {
    display: inline-block;
+   margin: 0 5px;
+   padding: 0 13px;
 }
 
-.header--menu-item + .header--menu-item {
-   padding-left: 25px;
-}
+
 
 .header--menu-item a {
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Roboto', sans-serif;
    font-weight: 700;
    text-transform: uppercase;
-   font-size: 11px;
+   font-size: 15px;
    letter-spacing: 1px;
-   color: rgba(255, 255, 255, .9);
+   color: rgba(255, 255, 255);
 }
 
-.header--to-book {
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 700;
-   margin-left: 40px;
-   letter-spacing: 1px;
-   font-size: 12px;
-   text-transform: uppercase;
+.header--menu-item .icon-shopping-cart {
+   content: '\e900';
    color: #fff;
-   background-color: #8b755a;
-   padding: 18px 25px;
+   font-size: 30px;
+   vertical-align: middle;
+}
+
+.header--menu-list {
+   position: relative;
+}
+
+.sub--menu {
+   position: absolute;
+   display: none;
+   left: 5px;
+   padding: 13px;
+}
+
+.header--menu-list > li:hover {
+   background-color: #fcff19;
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+
+.header--menu-list > li:hover .sub--menu {
+   display: block;
+   background-color: #fcff19;
+   border-top-right-radius: 6px;
+   border-bottom-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   padding-top: 19px;
+}
+
+.header--menu-list > li:hover a {
+   color: #000;
+}
+
+.color--text-yellow {
+   color: #d2ce16;
 }
 
 .top {
@@ -109,25 +138,35 @@ li {
    font-size: 50px;
    font-family: 'Roboto', sans-serif;
    margin-bottom: 35px;
+   font-weight: bold;
+   color: #fff;
+   letter-spacing: 5px;
 }
 
 .top-title {
    font-size: 28px;
    text-transform: uppercase;
-   line-height: 32px;
+   line-height: 1.16;
    margin-bottom: 55px;
    font-family: 'Roboto';
    font-weight: lighter;
+   color: #c4bebe;
 }
 
 .top--link {
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Roboto', sans-serif;
    font-size: 12px;
+   line-height: 2.708;
    letter-spacing: 1px;
-   font-weight: 700;
-   border: 2px solid #fff;
-   padding: 14px 20px;
+   font-weight: bold;
+   background-color: #000;
+   border-radius: 10px;
+   padding: 18px 27px;
    color: #fff;
+}
+
+.top--link:hover {
+   color: rgb(252, 255, 25);
 }
 
 .top--item-1 {
@@ -159,38 +198,64 @@ li {
    height: 100vh;
 }
 
-.top-slider .slick-dots {
+.top-slider {}
+
+.slick-next {
    position: absolute;
    top: 50%;
-   transform: translate(0, -50%);
-   left: 35px;
-}
-
-.top-slider .slick-dots li button {
-   height: 35px;
-   width: 0;
+   right: 20px;
+   z-index: 15;
+   height: 55px;
+   width: 55px;
    font-size: 0;
    background-color: transparent;
-   border: none;
-   border-left: 1px solid transparent;
+   transform: translate(0, -50%);
    outline: none;
-   position: relative;
-   padding: 0 24px 0 0;
    cursor: pointer;
+   border-radius: 15%;
+}
+
+.slick-next::before {
+   content: '\e901';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'icomoon';
+   font-size: 30px;
+   color: #fff;
+   border-radius: 50%;
+}
+
+.slick-prev {
+   position: absolute;
+   top: 50%;
+   left: 20px;
+   z-index: 15;
+   height: 55px;
+   width: 55px;
+   font-size: 0;
+   background-color: transparent;
+   transform: translate(0, -50%);
+   outline: none;
+   cursor: pointer;
+   border-radius: 15%;
+}
+
+.slick-prev::before {
+   content: '\e902';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'icomoon';
+   font-size: 30px;
+   color: #fff;
+   border-radius: 50%;
 }
 
 .top-slider .slick-dots li.slick-active button {
    border-left: 1px solid #fff;
-}
-
-.top-slider .slick-dots li button::before {
-   content: '\f105';
-   position: absolute;
-   right: 0;
-   top: 9px;
-   font-family: 'icomoon';
-   font-size: 15px;
-   color: rgba(255, 255, 255, .5);
 }
 
 .top-slider .slick-dots li.slick-active button::before {

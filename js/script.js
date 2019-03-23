@@ -1,8 +1,8 @@
-$(function() {
+$(function () {
 
    $('.top-slider').slick({
-      arrows: false,
-      dots: true,
+      arrows: true,
+      dots: false,
       autoplay: true,
       autoplaySpeed: 3000,
       fade: true,
@@ -16,7 +16,7 @@ $(function() {
 		]
    });
 
-   $('.menu--btn').click(function() {
+   $('.menu--btn').click(function () {
       $('.header--menu-list').slideToggle();
    });
 
