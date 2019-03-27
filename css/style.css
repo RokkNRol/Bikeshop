@@ -1,4 +1,5 @@
 * {
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
@@ -31,6 +32,7 @@ li {
    top: 0;
    width: 100%;
    z-index: 15;
+   padding: 0 60px;
 }
 
 .container {
@@ -42,10 +44,17 @@ li {
 
 .header--inner,
 .footer--inner {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
    padding: 20px 0;
+   flex-wrap: wrap;
 }
 
 .header--menu,
@@ -129,11 +138,13 @@ li {
 }
 
 .top--inner {
+   width: 100%;
    position: absolute;
    left: 50%;
    top: 50%;
    z-index: 10;
    text-align: center;
+   -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
    color: white;
    font-family: 'Montserrat', sans-serif;
@@ -146,6 +157,7 @@ li {
    font-weight: bold;
    color: #fff;
    letter-spacing: 5px;
+   line-height: initial;
 }
 
 .top-title {
@@ -212,6 +224,7 @@ li {
    width: 55px;
    font-size: 0;
    background-color: transparent;
+   -webkit-transform: translate(0, -50%);
    transform: translate(0, -50%);
    outline: none;
    cursor: pointer;
@@ -223,6 +236,7 @@ li {
    position: absolute;
    top: 50%;
    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
    font-family: 'icomoon';
    font-size: 30px;
@@ -239,6 +253,7 @@ li {
    width: 55px;
    font-size: 0;
    background-color: transparent;
+   -webkit-transform: translate(0, -50%);
    transform: translate(0, -50%);
    outline: none;
    cursor: pointer;
@@ -250,6 +265,7 @@ li {
    position: absolute;
    top: 50%;
    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
    font-family: 'icomoon';
    font-size: 30px;
@@ -291,9 +307,15 @@ li {
 }
 
 .categories--imgs {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
    padding-bottom: 170px;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
 }
 
 .categories--img {
@@ -303,11 +325,19 @@ li {
 .block--categories {
    width: 100%;
    position: absolute;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
    flex-direction: column;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
    top: 60%;
    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%);
 }
 
@@ -321,6 +351,11 @@ li {
    font-family: 'Roboto', sans-serif;
    font-weight: bold;
    font-size: 12px;
+}
+
+.block--categories a:hover {
+   color: #fcff19;
+   border: 3px solid #fcff19;
 }
 
 .sup {
@@ -339,8 +374,13 @@ li {
 }
 
 .block--shop-imgs {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-pack: distribute;
    justify-content: space-around;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
 }
 
 .block--shop-img {
@@ -348,20 +388,22 @@ li {
 }
 
 .block--shop-categories {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-
+   flex-wrap: wrap;
 }
 
 .select-wrapper {
    position: relative;
-   width: 140px;
+   width: auto;
    border: 1px solid #6C7231;
    border-radius: 9px;
    margin-right: 10px;
 }
 
 .select-wrapper select {
-   width: 140px;
+   width: 152px;
    padding: 18px 20px 18px 17px;
    background: transparent;
    border: 0;
@@ -447,8 +489,13 @@ li {
 .form--contact {
    max-width: 450px;
    margin: 0 auto;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
 
 }
@@ -475,16 +522,23 @@ li {
    font-style: normal;
    font-weight: 700;
    background-color: #b7b7b7;
+   cursor: pointer;
+}
+
+.form--contact .button-send:hover {
+   color: #fcff19;
 }
 
 .name--contact-form,
 .surname--contact-form {
+   -ms-flex-preferred-size: 210px;
    flex-basis: 210px;
 }
 
 .email--contact-form,
 .textarea--contact-form,
 .button-send {
+   -ms-flex-preferred-size: 100%;
    flex-basis: 100%;
 }
 
