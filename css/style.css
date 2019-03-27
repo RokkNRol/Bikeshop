@@ -40,18 +40,21 @@ li {
 
 }
 
-.header--inner {
+.header--inner,
+.footer--inner {
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 20px 0;
 }
 
-.header--menu {
+.header--menu,
+.footer--menu {
    margin-left: auto;
 }
 
-.header--menu-item {
+.header--menu-item,
+.footer--menu-item {
    display: inline-block;
    margin: 0 5px;
    padding: 0 13px;
@@ -59,13 +62,24 @@ li {
 
 
 
-.header--menu-item a {
+.header--menu-item a,
+.footer--menu-item a {
    font-family: 'Roboto', sans-serif;
    font-weight: 700;
    text-transform: uppercase;
    font-size: 15px;
    letter-spacing: 1px;
    color: rgba(255, 255, 255);
+}
+
+.footer--menu-item a {
+   color: #000;
+}
+
+.footer--menu-item a:hover {
+   color: #000;
+   font-weight: 400;
+   font-style: normal;
 }
 
 .header--menu-item .icon-shopping-cart {
@@ -75,7 +89,8 @@ li {
    vertical-align: middle;
 }
 
-.header--menu-list {
+.header--menu-list,
+.footer--menu-list {
    position: relative;
 }
 
@@ -410,11 +425,23 @@ li {
    background-repeat: no-repeat;
 }
 
+.title-categories-contact {
+   font-size: 28px;
+   font-family: 'Roboto', sans-serif;
+   padding: 55px 0;
+   font-weight: bold;
+   color: #000;
+   letter-spacing: 0;
+   text-transform: uppercase;
+   text-align: center;
+}
+
 .contact--us-title {
    font-size: 15px;
    color: #000;
    text-align: center;
    font-family: 'Roboto', sans-serif;
+   margin-bottom: 50px;
 }
 
 .form--contact {
@@ -424,4 +451,44 @@ li {
    flex-wrap: wrap;
    justify-content: space-between;
 
+}
+
+.form--contact input,
+.form--contact .textarea--contact-form {
+   border: 1px solid #dadada;
+   border-radius: 9px;
+   margin-bottom: 21px;
+   padding: 18px;
+   color: #919191;
+   font-size: 12px;
+   font-family: 'Roboto', sans-serif;
+   font-style: italic;
+}
+
+.form--contact .textarea--contact-form {
+   min-height: 152px;
+}
+
+.form--contact .button-send {
+   margin-bottom: 47px;
+   color: #fff;
+   font-style: normal;
+   font-weight: 700;
+   background-color: #b7b7b7;
+}
+
+.name--contact-form,
+.surname--contact-form {
+   flex-basis: 210px;
+}
+
+.email--contact-form,
+.textarea--contact-form,
+.button-send {
+   flex-basis: 100%;
+}
+
+.footer {
+   min-height: 70px;
+   background-color: #fcff19;
 }
