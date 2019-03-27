@@ -282,8 +282,6 @@ li {
 }
 
 .categories--img {
-   display: inline-block;
-   margin: 0 auto;
    position: relative;
 }
 
@@ -323,4 +321,107 @@ li {
    font-family: 'Roboto', sans-serif;
    font-weight: lighter;
    font-size: 16px;
+}
+
+.block--shop-imgs {
+   display: flex;
+   justify-content: space-around;
+}
+
+.block--shop-img {
+   margin-bottom: 35px;
+}
+
+.block--shop-categories {
+   display: flex;
+
+}
+
+.select-wrapper {
+   position: relative;
+   width: 140px;
+   border: 1px solid #6C7231;
+   border-radius: 9px;
+   margin-right: 10px;
+}
+
+.select-wrapper select {
+   width: 140px;
+   padding: 18px 20px 18px 17px;
+   background: transparent;
+   border: 0;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+}
+
+.select-wrapper select::-ms-expand {
+   display: none;
+   /* remove arrow IE     */
+}
+
+.select-arrow-3 {
+   position: absolute;
+   z-index: -9999;
+   border: 8px solid transparent;
+   border-bottom: 0;
+   right: 6px;
+
+}
+
+.select-arrow-3:nth-child(1) {
+   top: 24px;
+   border-top-color: #6C7231;
+}
+
+.select-arrow-3:nth-child(2) {
+   top: 21px;
+   border-top-color: #FFF;
+
+}
+
+.block--shop-name {
+   margin-right: auto;
+   font-size: 15px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.block--shop-cost {
+   font-weight: lighter;
+}
+
+.block--shop-button {
+   background-color: #b7b7b7;
+   border-radius: 9px;
+   width: 93px;
+   color: #fff;
+   border: none;
+}
+
+.block--shop-button:hover {
+   background-color: #000;
+   color: #fcff19;
+}
+
+.contact--us {
+   background-image: url(../img/CONTACT_US_BG.jpg);
+   background-repeat: no-repeat;
+}
+
+.contact--us-title {
+   font-size: 15px;
+   color: #000;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+}
+
+.form--contact {
+   max-width: 450px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
 }
